@@ -43,3 +43,53 @@ map[pos][ind] = "X"
 # Write your code above this row 👆
 # 🚨 Don't change the code below 👇
 print(f"{line1}\n{line2}\n{line3}")
+
+
+
+
+
+# Rock, Paper & scissor game :
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+
+asci_list = [rock, paper, scissors]
+
+input = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
+
+random_int = random.randint(0,2)
+if input == random_int :
+    print(f"Your choice : \n {asci_list[input]} \n Computer's choice : \n {asci_list[random_int]} \n It's a draw")
+
+elif input == 0 and random_int == 1 :
+    print(f"Your choice : \n {asci_list[input]} \n Computer's choice : \n {asci_list[random_int]} \n You just won")
+
+elif input == 0 and random_int == 2 :
+    print(f"Your choice : \n {asci_list[input]} \n Computer's choice : \n {asci_list[random_int]} \n You just lost")
